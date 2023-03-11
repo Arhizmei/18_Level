@@ -1,5 +1,6 @@
 package com.zmei.a18_level
 
+import Constants.constansMain
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,13 +27,22 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+    if(requestCode == constansMain.REQUEST_CODE_SIGN_IN){
+    }
+    else if(requestCode == constansMain.REQUEST_CODE_SIGN_UP) {
     }
 
-    fun onClickSignIn(view: View){
 
+    fun onClickSignIn(view: View){
+    val intent = Intent(this, SecondActivityNew::class.java)
+        intent.putExtra(constansMain.SIGN_STATE, constansMain.SIGN_IN_STATE)
+        startActivityForResult(intent, constansMain.REQUEST_CODE_SIGN_IN)
     }
 
     fun onClickSignUp(view: View){
+        val intent = Intent(this, SecondActivityNew::class.java)
+        intent.putExtra(constansMain.SIGN_STATE, constansMain.SIGN_UP_STATE)
+        startActivityForResult(intent, constansMain.REQUEST_CODE_SIGN_UP)
 
     }
 }
