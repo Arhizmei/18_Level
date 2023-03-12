@@ -8,10 +8,11 @@
 
     <Button
         android:id="@+id/buttonSignIn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="329dp"
+        android:layout_height="47dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:onClick="onClickSignIn"
         android:text="@string/sign_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +25,7 @@
         android:id="@+id/buttonSignUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="onClickSignUp"
         android:text="@string/sign_up"
         app:layout_constraintEnd_toEndOf="@+id/buttonSignIn"
         app:layout_constraintStart_toStartOf="@+id/buttonSignIn"
@@ -49,7 +51,7 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/tvInfo"
         app:layout_constraintEnd_toEndOf="@+id/buttonSignIn"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@+id/buttonSignIn"
         app:srcCompat="@drawable/face_one" />
 </androidx.constraintlayout.widget.ConstraintLayout>

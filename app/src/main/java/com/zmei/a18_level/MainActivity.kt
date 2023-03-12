@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.zmei.a18_level.databinding.ActivityMain2Binding
 import com.zmei.a18_level.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -33,13 +34,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickSignIn(view: View){
-    val intent = Intent(this, SecondActivityNew::class.java)
+    val intent = Intent(this, MainActivity2::class.java)
         intent.putExtra(constansMain.SIGN_STATE, constansMain.SIGN_IN_STATE)
         startActivityForResult(intent, constansMain.REQUEST_CODE_SIGN_IN)
     }
 
     fun onClickSignUp(view: View){
-        val intent = Intent(this, SecondActivityNew::class.java)
+        val intent = Intent(this, MainActivity2::class.java)
         intent.putExtra(constansMain.SIGN_STATE, constansMain.SIGN_UP_STATE)
         startActivityForResult(intent, constansMain.REQUEST_CODE_SIGN_UP)
 
