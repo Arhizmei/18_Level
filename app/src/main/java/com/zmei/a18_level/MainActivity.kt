@@ -27,11 +27,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-    if(requestCode == constansMain.REQUEST_CODE_SIGN_IN){
+        if (requestCode == constansMain.REQUEST_CODE_SIGN_IN) {
+        } else if (requestCode == constansMain.REQUEST_CODE_SIGN_UP) {
+        }
     }
-    else if(requestCode == constansMain.REQUEST_CODE_SIGN_UP) {
-    }
-
 
     fun onClickSignIn(view: View){
     val intent = Intent(this, SecondActivityNew::class.java)
