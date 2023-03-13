@@ -29,6 +29,14 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == constansMain.REQUEST_CODE_SIGN_IN) {
+        val l = data?.getStringExtra(constansMain.LOGIN)
+        val p = data?.getStringExtra(constansMain.PASSWORD)
+        if (login == l && password == p){
+            binding.imAvatar.setImageResource(avatarImageId)
+            val textInfo = "$name $name2 $name3"
+            binding.tvInfo.text = textInfo
+        } else {binding.tvInfo.text = "Такого аккаунта нет"
+                binding.imAvatar.setImageResource(R.drawable.stop)}
         } else if (requestCode == constansMain.REQUEST_CODE_SIGN_UP) {
         }
     }
